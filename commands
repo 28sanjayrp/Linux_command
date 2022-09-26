@@ -1,0 +1,15 @@
+pwd
+ls
+ls -la
+cd
+mkdir
+rmdir
+rm
+rm -r
+touch
+cp
+mv
+locate
+echo
+vi
+cat
