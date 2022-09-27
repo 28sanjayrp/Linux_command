@@ -13,3 +13,6 @@ locate
 echo
 vi
 cat
+git init
+git add
+git commit
