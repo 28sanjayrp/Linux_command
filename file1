@@ -1,0 +1,11 @@
+If we need to track our project folders we need to initialize it to do so use -# git init command to initialize git inside perticular directory.
+
+initialization is specific to folder to track each folder we need to track each folder by using git init command in every folder.
+
+to know what all files or records are there in staging area - use command - #git status
+
+#git add <filename> command is used to move filefrom working directiory to staging area.
+
+#git commit - used to commit changes and it moves file from staging area to git directory or local repo.
+
+
