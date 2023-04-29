@@ -1,0 +1,18 @@
+What is OS?
+-> Operating system is an computer software program that is "used to manage our computer hardware resources 
+and provides an environment for our applications to execute".
+
+
+
+What is Linux?
+-> "Linux is open source operating system based on the linux kernel" which anyone can modify and distribute.
+
+What is kernel?
+-> Kernel is "master computer software program which manages the hardware resources or interacts with hardware component" or "the core component of an OS".
+- Humans cannot understand the language of kernel.
+
+linux is kernel using which many linux os have been released and these releases are known as "Flavors"
+For example - slackware, centOS, ubuntu, fedore, debian, archlinux etc.
+
+what is hardware?
+-> The hardware essentially consists of CPU, RAM, and Hard disk(ROM) with supporting electronic chips(chip set)
