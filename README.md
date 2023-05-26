@@ -1,3 +1,3 @@
 # Linux_command
-linux practice commands
+linux basic commands for practice with description and example.
 Linux Trainig
