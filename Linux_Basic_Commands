@@ -40,9 +40,14 @@ to check whether the folder is created or not use $ls command
 10)$sudo su -to change the corrent user a super/root user.
   ex - $sudo su
 
-11)$mv - to move or rename the file.
+11)$mv - to move or rename the file or derectory.
   ex - to move - $mv <file_name> <destination folder>  - $mv file1.txt /new project/Project2/
+  ex - to move directory - $mv <source_directory> <destination_directory> - $mv /project1/app1/code /project2/app1
   ex - to rename - $mv <filename_tobechange> <new file name> - $mv file1.txt file.txt
+  ex - to remame - syntax - $mv <old_dir_name> <new_dir_name> - $mv d1 d1_new
+
+  Note - If you compare the $mv command with the $cp command, you see that the $mv command deletes the 
+	source location when it moves the files or directories to the destination location.
 
 12)$rm -r -> to remove all the contents in the directory and directory as well.
   ex - $rm -r Project1
@@ -60,8 +65,7 @@ to check whether the folder is created or not use $ls command
 
 16)$chmod - Command to change a file mode to r – read, w- write, or x- execute
   ex - $chmod u+x file1.txt - "u" stands for user, gives the execute permition to user
-  ex - $chmod 777 file.txt  - another method of giving the permition, 777 is permition code which means 
-  gives all 3 permitions to all(user, group, and others)
+  ex - $chmod 777 file.txt  - another method of giving the permition, 777 is permition code which means gives all 3 permitions to all(user, group, and others)
   ex - $chmod g-x file.txt  - that removes the execute permition of group user.
 
 17)$chown - to change the ownership of a file or folder.
@@ -87,6 +91,11 @@ to check whether the folder is created or not use $ls command
   ex - copy in a same directory -  $cp <existing_filename> <new file name>  -> $cp file.txt file2.txt
   ex - copy to different directory - $cp <existing file name> <destination directory> - $cp text.txt /project1/app1/
 
+   --> The copy command of a directory is similar to the copy command of a file.
+       The option -r will recursively copy the contents of the source directory to the destination directory.
+	ex - syntax - cp -r <source_dir> <destination_dir>
+		   ex - cp -r d1 d2
+
 23)$pwd - used to display the location of the current working directory. 
   ex - $pwd 
 
@@ -94,17 +103,15 @@ to check whether the folder is created or not use $ls command
   ex - $head <filename> -> $head demo.txt
 
 
-25)$tail - The tail command is similar to the head command. The difference between both commands is that it displays 
-the last ten lines of the file content. It is useful for reading the error message.
+25)$tail - The tail command is similar to the head command. The difference between both commands is that it displays the last ten lines of the file content. 
+           It is useful for reading the error message.
   ex - if we have a 100 lines of code then it displays last 10 lines i.e 90-100.
       $tail <failname> --> $tail demo.txt
 
-26)$tac - > The tac command is the reverse of cat command, as its name specified. It displays the file content in reverse order
-(from the last line).
+26)$tac - > The tac command is the reverse of cat command, as its name specified. It displays the file content in reverse order (from the last line).
   ex - $tac <file name> --> $tac demo.txt
 
-27)$su - The su command provides administrative access to another user. In other words, it allows access of the Linux shell 
-to another user.
+27)$su - The su command provides administrative access to another user. In other words, it allows access of the Linux shell to another user.
   ex - $su <user name>  -> $su ec2-user
                      password:
 
@@ -122,13 +129,13 @@ to another user.
 31)$groupadd -  The groupadd command is used to create a user group.
   ex - $groupadd <group name> ->  sudo groupadd developer
 
-32)$cut -  The cut command is used to select a specific column of a file. The '-d' option is used as a delimiter, 
-and it can be a space (' '), a slash (/), a hyphen (-), or anything else. And, the '-f' option is used to specify a column number.
+32)$cut -  The cut command is used to select a specific column of a file. The '-d' option is used as a delimiter, and it can be a space (' '), 
+           a slash (/), a hyphen (-), or anything else. And, the '-f' option is used to specify a column number.
   ex - $cut -d(specify delimiter) -f(specify colunm nember) <filename>
     ex - file1.txt has - sanjay-40
                          chetan-50
-			                   vinay-90
-			                   ravi-70
+			vinay-90
+			ravi-70
   if we use $cut -d- -f2 file1.txt
   o/p - 40
 	50
@@ -177,16 +184,39 @@ form root find file - $fing / -name "file1.txt"
 41)$sleep - The sleep command is used to hold the terminal by the specified amount of time. By default, it takes time in seconds.
   ex -  $sleep <time> - > $sleep 5
 
-42)$df - The df command is used to display the disk space used in the file system. 
-It displays the output as in the number of used blocks, available blocks, and the mounted directory.
-   ex - $df
+42)$df - The df command is used to display the disk space used in the file system. It displays the output as in the number of used blocks, available blocks, and the mounted directory.
+   $df
 
 43)$mail - The mail command is used to send emails from the command line.
   ex - $mail -s "Subject" <recipient address>  - > $mail -s "project completed successfully" lead123#gmail.com
-   cc: 
+             cc: 
 		Hello there,
 		hope you are doing well.
 
 44)$exit - to log out of the commnd line.
   ex - $exit
-   ex - $df 
+
+45)$free - The $free command is used to display the "information of memory" used by the system.
+	ex - $free
+
+46)$top - The top command is used to display the information of processes running in Linux. the info provided is dynamic.
+   ex - $top
+
+47)$uname - $uname command will provide the information regarding the OS distribution, release version, 
+	CPU architecture, and kernel version.
+	ex - #uname -a
+	-a --> Print the system information in a specific order
+	-n --> Print the hostname
+	-s --> Pronts the kernel name.
+	-r --> Print the kernel version.
+	-v --> Print the current kernel version.
+	-m --> Print the machine hardware information.
+
+48)$lsusb - $lsusb command is used to display the list or information of various USB devices connected 
+	to the system.
+	ex- $lsusb
+49)$lsb_release - The $lsb_release command is used to display the installed Linux distributor ID, release 
+		version, and codename.
+	ex - lsb_release
+50)$ip - The ip command is used to display the IP related details of the system.
+	 ex - $ip
